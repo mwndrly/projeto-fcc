@@ -14,6 +14,11 @@ O README principal (este aqui) serve como índice geral do projeto.
 ## Estrutura do Repositório
 
 ```
+├── desafio3/
+│   ├── web/
+│   ├── docker-compose.yml
+│   └── README.md
+│
 ├── desafio4/
 │   ├── service_1/
 │   ├── service_2/
@@ -31,6 +36,22 @@ O README principal (este aqui) serve como índice geral do projeto.
 ```
 
 ## Desafios
+
+### **Desafio 3 — Orquestração de Múltiplos Serviços**
+
+- Três serviços rodando juntos via Docker Compose:
+   - web (Node.js)
+   - db (Postgres)
+   - cache (Redis)
+- Comunicação interna entre containers.
+- Variáveis de ambiente configuradas no compose.
+- Endpoint /status validando comunicação com DB e Cache.
+- Demonstração prática de depends_on e rede interna Docker.
+
+👉 Documentação completa dentro da pasta:
+`/desafio3/README.md`
+
+---
 
 ### **Desafio 4 — Microsserviços Independentes**
 - Dois microsserviços que se comunicam diretamente via HTTP.
@@ -77,6 +98,8 @@ Os desafios têm como meta:
 
 1. Entre na pasta do desafio:
    ```bash
+   cd desafio3
+   # ou
    cd desafio4
    # ou
    cd desafio5
