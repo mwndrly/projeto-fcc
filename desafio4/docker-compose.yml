@@ -1,0 +1,19 @@
+services:
+  service_1:
+    build: ./service_1
+    container_name: service_1
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
+  service_2:
+    build: ./service_2
+    container_name: service_2
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - SERVICE_A_URL=http://service_1:3001
+    depends_on:
+      - service_1
